@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="css/weather-icons-wind.css">
+<style>
+.box{
+margin:auto;
+width:70%;
+height:500px;
+background-color:black;
+margin-top:100px;
+border:.1px solid black;
+}
+.foo {
+  float: left;
+  width: 20px;
+  height: 500px;
+  width:19%;
+border:.5px solid black;
+  
+  
+}
+
+.grey {
+  background: #ECF0F1    ;
+}
+
+.white{
+  background: white;
+  width:23.5%
+}
+
+.day{color:blue;
+margin:20px;
+font-size:20px;
+}
+.a{
+size:110px;}
+</style>
+</head>
+<body onload="myFunction()">
+<div class="wi wi-wind wi-from-e a" ></div>
+<div class="box"	>
+<div class="foo white"><p class="day" id="a0"> </p></div>
+<div class="foo grey"><p class="day" id="a1"></p></div>
+<div class="foo grey"><p class="day" id="a2"></p></div>
+<div class="foo grey"><p class="day" id="a3"></p></div>
+<div class="foo grey"><p class="day" id="a4"></p></div>
+<div>
+<script>
+function myFunction() {
+    var t = new Date();
+    var n = t.getDay();
+	for(a=0;a<5;a++){
+	var i=a;
+	var p=n+a;
+	if(p>6){
+	p=n+a-7;
+	}
+    document.getElementById("a"+i).innerHTML =my(p);
+	 }
+	
+	
+}
+function my(n){
+if(n==0) return "SUNDAY";
+else if(n==1) return "MONDAY";
+else if(n==2) return "TUESDAY";
+else if(n==3) return "WEDNESDAY";
+else if(n==4) return "THURSDAY";
+else if(n==5) return "FRIDAY";
+else if(n==6) return "SATURDAY";
+}
+</script>
+</body>
+</html>
